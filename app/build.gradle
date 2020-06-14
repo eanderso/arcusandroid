@@ -88,6 +88,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     testOptions {
         unitTests.returnDefaultValues = true
     }
@@ -104,7 +108,6 @@ dependencies {
     implementation project(":cornea")
     implementation project(":analytics")
     implementation project(":presentation")
-    implementation project(":viewpager_indicator")
     implementation project(":materialEditText")
 
     implementation deps.appcompat
@@ -113,6 +116,7 @@ dependencies {
     implementation deps.design
     implementation deps.constraintLayout
     implementation deps.androidLifecycle
+    implementation deps.androidLifecycleCommon
     implementation deps.swipeRefreshLayout
     implementation(deps.androidCoreKtx)
 
